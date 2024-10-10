@@ -17,45 +17,44 @@
   <body>
     <!-- Sidebar start -->
     <section class="step-one container">
-      <div class="step-one-box-1">
-        <div class="step-one-main-box">
-          <img
-            class="mobile-img"
-            src="./public/images/bg-sidebar-mobile.svg"
-            alt=""
-          />
 
-          <ol class="sidebar-list">
-            <li class="list-items" id="item-one">
-              <div class="list-items-mini-box">
-                <h5 class="step-one-info-title">Step 1</h5>
-                <h4 class="step-one-info">Your info</h4>
-              </div>
-            </li>
 
-            <li class="list-items" id="item-two">
-              <div class="list-items-mini-box">
-                <h5 class="step-one-info-title">Step 2</h5>
-                <h4 class="step-one-info">Select plan</h4>
-              </div>
-            </li>
+      <div class="main-desktop-layout-box">
 
-            <li class="list-items" id="item-three">
-              <div class="list-items-mini-box">
-                <h5 class="step-one-info-title">Step 3</h5>
-                <h4 class="step-one-info">Add-ons</h4>
-              </div>
-            </li>
 
-            <li class="list-items" id="item-four">
-              <div class="list-items-mini-box">
-                <h5 class="step-one-info-title">Step 4</h5>
-                <h4 class="step-one-info">Summary</h4>
-              </div>
-            </li>
-          </ol>
+        <ol class="sidebar-list">
+          <li class="list-items" id="item-1">
+            <div class="list-items-mini-box">
+              <h5 class="step-one-info-title">Step 1</h5>
+              <h4 class="step-one-info">Your info</h4>
+            </div>
+          </li>
 
-          <!-- Sidebar end -->
+          <li class="list-items" id="item-2">
+            <div class="list-items-mini-box">
+              <h5 class="step-one-info-title">Step 2</h5>
+              <h4 class="step-one-info">Select plan</h4>
+            </div>
+          </li>
+
+          <li class="list-items" id="item-3">
+            <div class="list-items-mini-box">
+              <h5 class="step-one-info-title">Step 3</h5>
+              <h4 class="step-one-info">Add-ons</h4>
+            </div>
+          </li>
+
+          <li class="list-items" id="item-4">
+            <div class="list-items-mini-box">
+              <h5 class="step-one-info-title">Step 4</h5>
+              <h4 class="step-one-info">Summary</h4>
+            </div>
+          </li>
+        </ol>
+
+        <!-- Sidebar end -->
+
+        <div id="stepBox1" class="step-one-box-1" style="display: block">
 
           <div class="step-one-content-box">
             <h1 class="step-one-title">Personal info</h1>
@@ -65,7 +64,6 @@
 
             <div>
               <p class="step-one-content-text">Name</p>
-
               <input
                 class="step-one-input-box"
                 type="text"
@@ -75,9 +73,10 @@
               />
             </div>
 
+
+
             <div>
               <p class="step-one-content-text">Email Address</p>
-
               <input
                 class="step-one-input-box"
                 type="text"
@@ -87,9 +86,9 @@
               />
             </div>
 
+
             <div>
               <p class="step-one-content-text">Phone Number</p>
-
               <input
                 class="step-one-input-box"
                 type="text"
@@ -99,57 +98,255 @@
               />
             </div>
 
-            <button class="step-one-next-button-desktop">Next step</button>
+
+            <button
+              id="desktop-next-button"
+              class="step-one-next-button-desktop"
+            >
+              Next step
+            </button>
           </div>
-          <footer>
-            <div class="step-one-box">
-              <button class="step-one-next-button">Next Step</button>
+
+          <div class="step-one-box">
+            <button id="mobile-next-button" class="step-one-next-button-mobile">
+              Next Step
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 1 end -->
+
+        <!-- Step 2 start -->
+
+        <div id="stepBox2" class="step-one-box-2" style="display: none">
+
+          <div>
+            <h1 class="step-one-title">Select your plan</h1>
+            <p class="step-one-paragraph">
+              You have the option of monthly or yearly billing.
+            </p>
+          </div>
+
+          <div class="step-two-selection-box">
+            <div class="price-option-boxes">
+              <img
+                class="price-img"
+                src="./public/images/icon-arcade.svg"
+                alt=""
+              />
+              <div>
+                <h4 class="price-option-title">Arcade</h4>
+                <p class="price-option-sub">$9/mo</p>
+              </div>
             </div>
-          </footer>
+
+
+            <div class="price-option-boxes">
+              <img
+                class="price-img"
+                src="./public/images/icon-advanced.svg"
+                alt=""
+              />
+              <div>
+                <h4 class="price-option-title">Advanced</h4>
+                <p class="price-option-sub">$12/mo</p>
+              </div>
+            </div>
+
+
+            <div class="price-option-boxes">
+              <img
+                class="price-img"
+                src="./public/images/icon-pro.svg"
+                alt=""
+              />
+              <div>
+                <h4 class="price-option-title">Pro</h4>
+                <p class="price-option-sub">$15/mo</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="monthly-yearly-box">
+            <p>Monthly</p>
+
+            <button class="toggle-button">
+              <div class="button-cirlce"></div>
+            </button>
+            <p>Yearly</p>
+          </div>
+
+          <div class="step-two-box">
+            <button id="go-back-button" class="step-two-back-button">
+              Go Back
+            </button>
+            <button  id="desktop-next-button"  class="step-one-next-button-desktop">Next step</button>
+          </div>
+      
+
+        <div class="step-two-box-mobile">
+          <button id="go-back-button-mobile" class="step-two-back-button">
+            Go Back
+          </button>
+          <button  class="step-one-next-button-mobile">
+            Next step
+          </button>
         </div>
       </div>
-    </section>
 
-    <!-- Step 1 end -->
+    
+      <!-- Step 2 end -->
 
-    <!-- Step 2 start -->
+      <!-- Step 3 start -->
+      <div id="stepBox3" class="step-one-box-3" style="display: none">
+        <div>
+          <h1 class="step-one-title">Pick add-ons</h1>
+          <p class="step-one-paragraph">
+            Add-ons help enhance your gaming experience.
+          </p>
+        </div>
 
-    <!-- Select your plan You have the option of monthly or yearly billing. Arcade
-    $9/mo Advanced $12/mo Pro $15/mo Monthly Yearly Go Back Next Step -->
+        <div class="step-three-selection-box">
+          <div class="step-three-add-on-box">
+            <div class="option-checkbox-box">
+            <input type="checkbox" name="" id="" />
+           <div>
+              <h4 class="sub-option-title">Online service</h4>
+              <p class="sub-option-sub">Access to multiplayer games</p>
+            </div>
+            </div>
+            <p class="add-on-price">+$1/mo</p>
+          </div>
 
-    <!-- Step 2 end -->
+          <div class="step-three-add-on-box">
+            <div class="option-checkbox-box">
+            <input type="checkbox" name="" id="" />
+           <div>
+              <h4 class="sub-option-title">Larger storage</h4>
+              <p class="sub-option-sub">Extra 1TB of cloud save</p>
+            </div>
+            </div>
+            <p class="add-on-price">+$2/mo</p>
+          </div>
 
-    <!-- Step 3 start -->
+          <div class="step-three-add-on-box">
+            <div class="option-checkbox-box">
+            <input type="checkbox" name="" id="" />
+           <div>
+              <h4 class="sub-option-title">Customizable Profile</h4>
+              <p class="sub-option-sub">Custom theme on your profile</p>
+            </div>
+            </div>
+            <p class="add-on-price">+$2/mo</p>
+          </div>
+        </div>
 
-    <!-- Pick add-ons Add-ons help enhance your gaming experience. Online service
-    Access to multiplayer games +$1/mo Larger storage Extra 1TB of cloud save
-    +$2/mo Customizable Profile Custom theme on your profile +$2/mo Go Back Next
-    Step -->
+        <div class="step-two-box">
+          <button id="go-back-button" class="step-two-back-button">
+            Go Back
+          </button>
+          <button  id="desktop-next-button" class="step-one-next-button-desktop">Next step</button>
+        </div>
+     
 
-    <!-- Step 3 end -->
+      <div class="step-two-box-mobile">
+        <button id="go-back-button-mobile" class="step-two-back-button">
+          Go Back
+        </button>
+        <button id="mobile-next-button" class="step-one-next-button-mobile">
+          Next step
+        </button>
+      </div>
+    
 
-    <!-- Step 4 start -->
+        </div>
+     
+      <!-- Step 3 end -->
 
-    <!-- Finishing up Double-check everything looks OK before confirming. -->
+      <!-- Step 4 start -->
+      <div id="stepBox4" class="step-one-box-4" style="display: none"> 
 
-    <!-- Dynamically add subscription and add-on selections here -->
+        <div>
+          <h1 class="step-one-title"> Finishing up</h1>
+          <p class="step-one-paragraph">
+            Double-check everything looks OK before confirming. 
+          </p>
+        </div>
+     
+        <div class="totals-box">
 
-    <!-- Total (per month/year) Go Back Confirm -->
+          <div class="totals-info-box">
+        <div>
+        <h5 id="plan-type" class="plan-title">Plan Type(Montlhy)</h5>
+        <a class="adjust-plan-link" href="#">Change</a>
+        </div>
+        <p class="total-amount">$9/mo</p>
+        </div>
+        
+        <div class="line-small"></div>
 
-    <!-- Step 4 end -->
 
-    <!-- Step 5 start -->
+          <div class="totals-info-box" >
+<h6 class="total-info-1">Online service</h6>
+<p class="total-amount">+$1/mo</p>
+          </div>
 
-    <!-- Thank you! Thanks for confirming your subscription! We hope you have fun
+          <div class="totals-info-box">
+            <h6 class="total-info-1">Larger storage</h6>
+            <p class="total-amount">+$2/mo</p>
+          </div>
+
+          <div class="totals-info-box">
+            <h6 class="total-info-1">Total (per month)</h6>
+            <p class="total-amount">+$12/mo</p>
+          </div>
+        </div>
+   
+
+   
+
+    <div class="step-two-box">
+      <button id="go-back-button" class="step-two-back-button">
+        Go Back
+      </button>
+      <button  id="desktop-confirm-button" class="step-one-next-button-desktop">Confirm</button>
+    </div>
+ 
+
+  
+  
+
+
+  <div class="step-two-box-mobile">
+    <button id="go-back-button-mobile" class="step-two-back-button">
+      Go Back
+    </button>
+    <button id="mobile-confirm-button" class="mobile-confirm-button">
+    Confirm
+    </button>
+  </div>
+</div> 
+
+
+
+
+
+  <!-- Thank you! Thanks for confirming your subscription! We hope you have fun
     using our platform. If you ever need support, please feel free to email us
     at support@loremgaming.com. -->
 
-    <!-- Step 5 end -->
 
-    <!-- <footer>
-      <button>Next Step</button>
-    </footer> -->
+  </div>
+</div>
 
+
+    
+ 
+
+
+    
+    </section>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
