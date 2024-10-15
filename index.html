@@ -17,11 +17,7 @@
   <body>
     <!-- Sidebar start -->
     <section class="step-one container">
-
-
       <div class="main-desktop-layout-box">
-
-
         <ol class="sidebar-list">
           <li class="list-items" id="item-1">
             <div class="list-items-mini-box">
@@ -55,7 +51,6 @@
         <!-- Sidebar end -->
 
         <div id="stepBox1" class="step-one-box-1" style="display: block">
-
           <div class="step-one-content-box">
             <h1 class="step-one-title">Personal info</h1>
             <p class="step-one-paragraph">
@@ -68,12 +63,10 @@
                 class="step-one-input-box"
                 type="text"
                 name=""
-                id=""
+                id="name-input"
                 placeholder="e.g. Stephen King"
               />
             </div>
-
-
 
             <div>
               <p class="step-one-content-text">Email Address</p>
@@ -81,11 +74,10 @@
                 class="step-one-input-box"
                 type="text"
                 name=""
-                id=""
+                id="email-input"
                 placeholder="   e.g. stephenking@lorem.com "
               />
             </div>
-
 
             <div>
               <p class="step-one-content-text">Phone Number</p>
@@ -93,11 +85,10 @@
                 class="step-one-input-box"
                 type="text"
                 name=""
-                id=""
+                id="phone-input"
                 placeholder=" e.g. +1 234 567 890 "
               />
             </div>
-
 
             <button
               id="desktop-next-button"
@@ -105,12 +96,15 @@
             >
               Next step
             </button>
-          </div>
 
-          <div class="step-one-box">
-            <button id="mobile-next-button" class="step-one-next-button-mobile">
-              Next Step
-            </button>
+            <div class="step-one-box">
+              <button
+                id="mobile-next-button"
+                class="step-one-next-button-mobile"
+              >
+                Next Step
+              </button>
+            </div>
           </div>
         </div>
 
@@ -119,7 +113,6 @@
         <!-- Step 2 start -->
 
         <div id="stepBox2" class="step-one-box-2" style="display: none">
-
           <div>
             <h1 class="step-one-title">Select your plan</h1>
             <p class="step-one-paragraph">
@@ -128,7 +121,11 @@
           </div>
 
           <div class="step-two-selection-box">
-            <div class="price-option-boxes">
+            <button
+              class="price-option-boxes"
+              data-price="9"
+              data-plan="Arcade"
+            >
               <img
                 class="price-img"
                 src="./public/images/icon-arcade.svg"
@@ -137,11 +134,18 @@
               <div>
                 <h4 class="price-option-title">Arcade</h4>
                 <p class="price-option-sub">$9/mo</p>
+                <div class="yearly-box" style="display: none">
+                  <p class="price-option-yearly">$90/yr</p>
+                  <p class="price-yearly-text">2 months free</p>
+                </div>
               </div>
-            </div>
+            </button>
 
-
-            <div class="price-option-boxes">
+            <button
+              class="price-option-boxes"
+              data-price="12"
+              data-plan="Advanced"
+            >
               <img
                 class="price-img"
                 src="./public/images/icon-advanced.svg"
@@ -150,11 +154,15 @@
               <div>
                 <h4 class="price-option-title">Advanced</h4>
                 <p class="price-option-sub">$12/mo</p>
+
+                <div class="yearly-box" style="display: none">
+                  <p class="price-option-yearly">$120/yr</p>
+                  <p class="price-yearly-text">2 months free</p>
+                </div>
               </div>
-            </div>
+            </button>
 
-
-            <div class="price-option-boxes">
+            <button class="price-option-boxes" data-price="15" data-plan="Pro">
               <img
                 class="price-img"
                 src="./public/images/icon-pro.svg"
@@ -163,189 +171,262 @@
               <div>
                 <h4 class="price-option-title">Pro</h4>
                 <p class="price-option-sub">$15/mo</p>
-              </div>
-            </div>
 
+                <div class="yearly-box" style="display: none">
+                  <p class="price-option-yearly">$150/yr</p>
+                  <p class="price-yearly-text">2 months free</p>
+                </div>
+              </div>
+            </button>
           </div>
 
           <div class="monthly-yearly-box">
-            <p>Monthly</p>
+            <p id="monthly-text">Monthly</p>
 
             <button class="toggle-button">
               <div class="button-cirlce"></div>
             </button>
-            <p>Yearly</p>
+            <p data-time="yearly" id="yearly-text">Yearly</p>
           </div>
 
           <div class="step-two-box">
             <button id="go-back-button" class="step-two-back-button">
               Go Back
             </button>
-            <button  id="desktop-next-button"  class="step-one-next-button-desktop">Next step</button>
+            <button
+              id="desktop-next-button"
+              class="step-one-next-button-desktop"
+            >
+              Next step
+            </button>
           </div>
-      
 
-        <div class="step-two-box-mobile">
-          <button id="go-back-button-mobile" class="step-two-back-button">
-            Go Back
-          </button>
-          <button  class="step-one-next-button-mobile">
-            Next step
-          </button>
+          <div class="step-two-box-mobile">
+            <button id="go-back-button-mobile" class="step-two-back-button">
+              Go Back
+            </button>
+            <button class="step-one-next-button-mobile">Next step</button>
+          </div>
+        </div>
+
+        <!-- Step 2 end -->
+
+        <!-- Step 3 start -->
+        <div id="stepBox3" class="step-one-box-3" style="display: none">
+          <div>
+            <h1 class="step-one-title">Pick add-ons</h1>
+            <p class="step-one-paragraph">
+              Add-ons help enhance your gaming experience.
+            </p>
+          </div>
+
+          <div class="step-three-selection-box">
+            <div class="step-three-add-on-box">
+              <div class="option-checkbox-box">
+                <input
+                  id="online-checkbox"
+                  type="checkbox"
+                  name=""
+                  class="add-checkbox"
+                  data-price="1"
+                />
+                <div>
+                  <h4 class="sub-option-title">Online service</h4>
+                  <p class="sub-option-sub">Access to multiplayer games</p>
+                </div>
+              </div>
+              <p class="add-on-price monthly-price">+$1/mo</p>
+              <p
+                id="yearly-add-online"
+                class="add-on-price yearly-price"
+                style="display: none"
+              >
+                +$10/yr
+              </p>
+            </div>
+
+            <div class="step-three-add-on-box">
+              <div class="option-checkbox-box">
+                <input
+                  id="storage-checkbox"
+                  type="checkbox"
+                  name=""
+                  class="add-checkbox"
+                  data-price="2"
+                />
+                <div>
+                  <h4 class="sub-option-title">Larger storage</h4>
+                  <p class="sub-option-sub">Extra 1TB of cloud save</p>
+                </div>
+              </div>
+              <p class="add-on-price monthly-price">+$2/mo</p>
+              <p
+                id="yearly-add-storage"
+                class="add-on-price yearly-price"
+                style="display: none"
+              >
+                +$20/yr
+              </p>
+            </div>
+
+            <div class="step-three-add-on-box">
+              <div class="option-checkbox-box">
+                <input
+                  id="profile-checkbox"
+                  type="checkbox"
+                  name=""
+                  class="add-checkbox"
+                  data-price="2"
+                />
+                <div>
+                  <h4 class="sub-option-title">Customizable Profile</h4>
+                  <p class="sub-option-sub">Custom theme on your profile</p>
+                </div>
+              </div>
+              <p class="add-on-price monthly-price">+$2/mo</p>
+              <p
+                id="yearly-add-profile"
+                class="add-on-price yearly-price"
+                style="display: none"
+              >
+                +$20/yr
+              </p>
+            </div>
+          </div>
+
+          <div class="step-two-box">
+            <button id="go-back-button" class="step-two-back-button">
+              Go Back
+            </button>
+            <button
+              id="desktop-next-button"
+              class="step-one-next-button-desktop"
+            >
+              Next step
+            </button>
+          </div>
+
+          <div class="step-two-box-mobile">
+            <button id="go-back-button-mobile" class="step-two-back-button">
+              Go Back
+            </button>
+            <button id="mobile-next-button" class="step-one-next-button-mobile">
+              Next step
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3 end -->
+
+        <!-- Step 4 start -->
+        <div id="stepBox4" class="step-one-box-4" style="display: none">
+          <div>
+            <h1 class="step-one-title">Finishing up</h1>
+            <p class="step-one-paragraph">
+              Double-check everything looks OK before confirming.
+            </p>
+          </div>
+
+          <div class="totals-box">
+            <div class="totals-info-box">
+              <div>
+                <h5 id="plan-type" class="plan-title">
+                  <p id="plan-period-main" class="plan-period">(montlhy)</p>
+                </h5>
+                <a class="adjust-plan-link" href="#" id="change-plan-link"
+                  >Change</a
+                >
+              </div>
+              <p class="total-amount"></p>
+            </div>
+
+            <div class="line-small"></div>
+
+            <div class="totals-info-box" id="online-service">
+              <h6 class="total-info-1">Online service</h6>
+              <p class="total-amount" id="one-dollar">+$1/mo</p>
+
+              <p
+                id="yearly-online-services"
+                class="add-on-price"
+                style="display: none"
+              >
+                +$10/yr
+              </p>
+            </div>
+
+            <div class="totals-info-box" id="larger-storage">
+              <h6 class="total-info-1">Larger storage</h6>
+              <p class="total-amount" id="two-dollar">+$2/mo</p>
+              <p
+                id="yearly-storage-services"
+                class="add-on-price"
+                style="display: none"
+              >
+                +$20/yr
+              </p>
+            </div>
+
+            <div class="totals-info-box" id="customize-profile">
+              <h6 class="total-info-1">Customize profile</h6>
+              <p class="total-amount" id="two-dollar-two">+$2/mo</p>
+              <p
+                id="yearly-profile-services"
+                class="add-on-price"
+                style="display: none"
+              >
+                +$20/yr
+              </p>
+            </div>
+
+            <div class="totals-info-box">
+              <h6 class="total-info-1">Total</h6>
+              <p class="total-amount-main">+$12/mo</p>
+            </div>
+          </div>
+
+          <div class="step-two-box">
+            <button id="go-back-button" class="step-two-back-button">
+              Go Back
+            </button>
+            <button
+              id="desktop-confirm-button"
+              class="step-one-next-button-desktop"
+            >
+              Confirm
+            </button>
+          </div>
+
+          <div class="step-two-box-mobile">
+            <button id="go-back-button-mobile" class="step-two-back-button">
+              Go Back
+            </button>
+            <button
+              id="mobile-confirm-button"
+              class="step-one-next-button-mobile"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+
+        <div id="stepBox5" class="thank-you-box-main" style="display: none">
+          <div class="thank-you-box-content">
+            <img
+              class="thank-you-img"
+              src="./public/images/icon-thank-you.svg"
+              alt=""
+            />
+            <h1 class="thank-you-title">Thank you!</h1>
+
+            <p class="thank-you-paragraph">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </p>
+          </div>
         </div>
       </div>
-
-    
-      <!-- Step 2 end -->
-
-      <!-- Step 3 start -->
-      <div id="stepBox3" class="step-one-box-3" style="display: none">
-        <div>
-          <h1 class="step-one-title">Pick add-ons</h1>
-          <p class="step-one-paragraph">
-            Add-ons help enhance your gaming experience.
-          </p>
-        </div>
-
-        <div class="step-three-selection-box">
-          <div class="step-three-add-on-box">
-            <div class="option-checkbox-box">
-            <input type="checkbox" name="" id="" />
-           <div>
-              <h4 class="sub-option-title">Online service</h4>
-              <p class="sub-option-sub">Access to multiplayer games</p>
-            </div>
-            </div>
-            <p class="add-on-price">+$1/mo</p>
-          </div>
-
-          <div class="step-three-add-on-box">
-            <div class="option-checkbox-box">
-            <input type="checkbox" name="" id="" />
-           <div>
-              <h4 class="sub-option-title">Larger storage</h4>
-              <p class="sub-option-sub">Extra 1TB of cloud save</p>
-            </div>
-            </div>
-            <p class="add-on-price">+$2/mo</p>
-          </div>
-
-          <div class="step-three-add-on-box">
-            <div class="option-checkbox-box">
-            <input type="checkbox" name="" id="" />
-           <div>
-              <h4 class="sub-option-title">Customizable Profile</h4>
-              <p class="sub-option-sub">Custom theme on your profile</p>
-            </div>
-            </div>
-            <p class="add-on-price">+$2/mo</p>
-          </div>
-        </div>
-
-        <div class="step-two-box">
-          <button id="go-back-button" class="step-two-back-button">
-            Go Back
-          </button>
-          <button  id="desktop-next-button" class="step-one-next-button-desktop">Next step</button>
-        </div>
-     
-
-      <div class="step-two-box-mobile">
-        <button id="go-back-button-mobile" class="step-two-back-button">
-          Go Back
-        </button>
-        <button id="mobile-next-button" class="step-one-next-button-mobile">
-          Next step
-        </button>
-      </div>
-    
-
-        </div>
-     
-      <!-- Step 3 end -->
-
-      <!-- Step 4 start -->
-      <div id="stepBox4" class="step-one-box-4" style="display: none"> 
-
-        <div>
-          <h1 class="step-one-title"> Finishing up</h1>
-          <p class="step-one-paragraph">
-            Double-check everything looks OK before confirming. 
-          </p>
-        </div>
-     
-        <div class="totals-box">
-
-          <div class="totals-info-box">
-        <div>
-        <h5 id="plan-type" class="plan-title">Plan Type(Montlhy)</h5>
-        <a class="adjust-plan-link" href="#">Change</a>
-        </div>
-        <p class="total-amount">$9/mo</p>
-        </div>
-        
-        <div class="line-small"></div>
-
-
-          <div class="totals-info-box" >
-<h6 class="total-info-1">Online service</h6>
-<p class="total-amount">+$1/mo</p>
-          </div>
-
-          <div class="totals-info-box">
-            <h6 class="total-info-1">Larger storage</h6>
-            <p class="total-amount">+$2/mo</p>
-          </div>
-
-          <div class="totals-info-box">
-            <h6 class="total-info-1">Total (per month)</h6>
-            <p class="total-amount">+$12/mo</p>
-          </div>
-        </div>
-   
-
-   
-
-    <div class="step-two-box">
-      <button id="go-back-button" class="step-two-back-button">
-        Go Back
-      </button>
-      <button  id="desktop-confirm-button" class="step-one-next-button-desktop">Confirm</button>
-    </div>
- 
-
-  
-  
-
-
-  <div class="step-two-box-mobile">
-    <button id="go-back-button-mobile" class="step-two-back-button">
-      Go Back
-    </button>
-    <button id="mobile-confirm-button" class="mobile-confirm-button">
-    Confirm
-    </button>
-  </div>
-</div> 
-
-
-
-
-
-  <!-- Thank you! Thanks for confirming your subscription! We hope you have fun
-    using our platform. If you ever need support, please feel free to email us
-    at support@loremgaming.com. -->
-
-
-  </div>
-</div>
-
-
-    
- 
-
-
-    
     </section>
     <script type="module" src="./src/main.js"></script>
   </body>

@@ -6,12 +6,12 @@
   background-color: var(--clr-white);
   width: 100%;
   max-width: 90%;
-  height: 45%;
+  height: 65%;
   left: 4%;
   display: flex;
   flex-direction: column;
 }
-.mobile-confirm-button {
+#mobile-confirm-button {
   background-color: var(--clr-purplish-blue);
   color: var(--clr-white);
   border-radius: 5px;
@@ -52,13 +52,31 @@
   letter-spacing: 1px;
 }
 
+.totals-info-box-1 {
+  display: flex;
+  flex-direction: row;
+}
 .totals-info-box {
   display: flex;
   justify-content: space-between;
 }
 
+#online-service {
+  opacity: 0;
+}
+#larger-storage {
+  opacity: 0;
+}
+#customize-profile {
+  opacity: 0;
+}
+
 .plan-title {
   font-size: var(--size-sm);
+}
+
+.plan-period {
+  font-size: var(--size-xs);
 }
 
 .adjust-plan-link {

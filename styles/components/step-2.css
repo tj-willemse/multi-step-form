@@ -1,13 +1,13 @@
 .step-one-box-2 {
   top: 17.6%;
-  left: 4%;
+  left: 5%;
   position: absolute;
   border-radius: 10px;
   padding: 20px;
   background-color: var(--clr-white);
   width: 100%;
   max-width: 90%;
-  height: 70%;
+  height: 85%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -19,8 +19,13 @@
   gap: 2rem;
 }
 
+.price-option-title {
+  text-align: start;
+}
+
 .price-option-boxes {
   border: 1px solid var(--clr-cool-gray);
+  font-size: var(--size-xs);
   border-radius: 10px;
   padding: 10px;
   width: 100%;
@@ -28,7 +33,17 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  align-items: center;
+  align-items: start;
+}
+
+.yearly-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.price-option-boxes.selected {
+  border-color: var(--clr-purplish-blue);
 }
 
 .step-one-title {
@@ -38,6 +53,24 @@
   color: var(--clr-cool-gray);
   font-size: var(--size-xs);
 }
+
+/* .yearly-box {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+} */
+
+.price-option-yearly {
+  font-size: var(--size-xs);
+  color: var(--clr-cool-gray);
+}
+
+.price-yearly-text {
+  font-size: var(--size-xs);
+  color: var(--clr-marine-blue);
+  font-weight: 100;
+}
+
 .step-one-content-text {
   color: var(--clr-marine-blue);
 }
@@ -50,15 +83,21 @@
   width: 12px;
   height: 12px;
   background-color: var(--clr-white);
-  border-radius: 100%;
-  margin-left: 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  transition: left 0.3s;
 }
 .toggle-button {
   width: 40px;
   height: 20px;
   background-color: var(--clr-marine-blue);
   border-radius: 20px;
+  position: relative;
 }
+
 .monthly-yearly-box {
   margin-top: 50px;
   display: flex;
@@ -71,8 +110,7 @@
   display: none;
 }
 .step-two-box-mobile {
-  position: static;
-  margin-top: 90px;
+  margin-top: 40px;
   top: 10%;
   left: 0%;
   width: 100%;
@@ -112,7 +150,7 @@
     width: 100%;
     border-radius: 10px;
     padding: 30px;
-    gap: 2rem;
+
     position: static;
   }
   .step-two-selection-box {
@@ -128,9 +166,27 @@
     height: 120px;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .price-option-boxes.selected {
+    border-color: var(--clr-purplish-blue);
+  }
+  .price-option-button {
+    border: 1px solid var(--clr-cool-gray);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     align-items: start;
+    margin-top: 20px;
   }
+
   .price-option-title {
     font-size: var(--size-sm);
     color: var(--clr-marine-blue);
@@ -152,11 +208,17 @@
     background-color: var(--clr-marine-blue);
     border-radius: 20px;
   }
+
+  .toggle-button.toggled .button-cirlce {
+    margin-left: 22px;
+  }
+
   .monthly-yearly-box {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    font-weight: bold;
   }
   .step-two-back-button {
     position: absolute;
