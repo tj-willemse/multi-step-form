@@ -1,5 +1,8 @@
 body {
   background-color: var(--clr-magnolia);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ol {
@@ -267,7 +270,7 @@ ol li::before {
 /* 2xL */
 @media (min-width: 1536px) {
   .step-one-next-button-desktop {
-    top: 75.5%;
-    left: 58.7%;
+    top: 59%;
+    left: 57%;
   }
 }

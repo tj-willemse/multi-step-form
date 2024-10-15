@@ -16,7 +16,7 @@
 .step-two-selection-box {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
 .price-option-title {
@@ -34,6 +34,7 @@
   flex-direction: row;
   gap: 1rem;
   align-items: start;
+  margin-top: 20px;
 }
 
 .yearly-box {
@@ -53,12 +54,6 @@
   color: var(--clr-cool-gray);
   font-size: var(--size-xs);
 }
-
-/* .yearly-box {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid red;
-} */
 
 .price-option-yearly {
   font-size: var(--size-xs);
@@ -97,9 +92,12 @@
   border-radius: 20px;
   position: relative;
 }
+.toggle-button.toggled .button-cirlce {
+  margin-left: 22px;
+}
 
 .monthly-yearly-box {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -222,7 +220,7 @@
   }
   .step-two-back-button {
     position: absolute;
-    top: 77.5%;
+    top: 60%;
     z-index: 1;
   }
   .step-two-box-mobile {

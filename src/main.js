@@ -86,7 +86,6 @@ function updateTotalAmount() {
   const totalAmount = selectedPlanPrice + addOnTotal;
   const isYearly = toggleButton.classList.contains('toggled');
 
-  // Update the display with the appropriate string
   totalAmountMain.textContent = isYearly
     ? `$${totalAmount.toFixed(2)} /yr`
     : `$${totalAmount.toFixed(2)} /mo`;
